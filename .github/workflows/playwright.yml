@@ -35,7 +35,7 @@ jobs:
 
       - run: npx playwright install --with-deps
 
-      - run: npx playwright test
+      - run: npm run test:${{ github.event.inputs.environment }}
 
       - uses: actions/upload-artifact@v4
         if: always()
